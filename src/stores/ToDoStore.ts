@@ -1,6 +1,7 @@
 import { EventEmitter } from 'events';
 
 import ToDo from '../models/ToDo';
+import Dispatcher from '../dispatchers/dispatcher';
 
 class ToDoStore extends EventEmitter {
   public todos: ToDo[];
@@ -31,10 +32,19 @@ class ToDoStore extends EventEmitter {
     this.emit('change');
   }
 
+  handleActions(action) {
+    switch(action.type) {
+      case "CREATE_TODO": {
+        this.createToDo(action.text);
+      }
+    }
+  }
+
   getAll() {
     return this.todos;
   }
 }
 
 const todoStore = new ToDoStore();
+Dispatcher.register(todoStore.handleActions.bind(todoStore));
 export default todoStore;
