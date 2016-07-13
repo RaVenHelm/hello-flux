@@ -1,0 +1,24 @@
+{
+  "name": "hello-flux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --host localhost --port 3000 --colors --inline --hot"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "typescript": "^1.8.10",
+    "typings": "^1.3.1",
+    "webpack": "^1.13.1"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^2.0.1",
+    "source-map-loader": "^0.1.5",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
