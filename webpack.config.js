@@ -1,3 +1,7 @@
+// NOTE: In the typings.json we're having to install the definitions
+// for Immutable-JS and fbemitter, so typescript doesn't complain.
+// Hopefully, the module loading for TS will be imporved somehow.
+
 module.exports = {
     entry: "./src/index.tsx",
     output: {
