@@ -1,7 +1,6 @@
 import * as React from 'react';
 
-import ToDoStore from '../stores/ToDoStore';
-import ToDoItem from '../models/ToDo';
+import { ToDoStore, ToDoType } from '../stores/ToDoStore';
 
 import { ToDo } from '../components/ToDo';
 
